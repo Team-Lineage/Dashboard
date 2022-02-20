@@ -1,17 +1,18 @@
 function timer() {
+    "use strict";
     var date = new Date();
     document.getElementById("timer").innerHTML = trueMonth() + ' ' + trueDay() + ' ' + date.getFullYear();
 }
 
-function trueDay(){
-    var date = new Date();
-    var newDate = date.getDate();
-    var modulus = date.getDate() % 10;
+function trueDay() {
+    "use strict";
+    var newDate = new Date().getDate();
+    var modulus = newDate % 10;
     
-    if(String(newDate).charAt(0) != 1){
-        switch(modulus){
+    if (String(newDate).charAt(0) !== 1) {
+        switch (modulus) {
             case 1:
-                newDate = newDate +'st';
+                newDate = newDate + 'st';
                 break;
             case 2:
                 newDate = newDate + 'nd';
@@ -22,14 +23,15 @@ function trueDay(){
             default:
                 newDate = newDate + 'th';
         }
-    }else{
+    } else {
             newDate = newDate + 'th';
     }
     return newDate;
 }
 
-function trueMonth(){
+function trueMonth() {
+    "use strict";
     var date = new Date();
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    return months[date.getMonth()];
+    var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return month[date.getMonth()];
 }
