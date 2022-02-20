@@ -9,12 +9,41 @@
     <body onload="timer();">
         <header>
             <nav>
-                <h1>My Dash</h1>
-                <script>setInterval(timer, 1000);</script>
+                <h1>Dashboard</h1>
+                <script>setInterval(timer, 60 * 1000);</script>
                 <p id="timer">time</p>
             </nav>
         </header>
         <main>
+            <table>
+                <tr>
+                    <th>News</th>
+                    <th>Entrtainment</th>
+                    <th>Shopping</th>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="https://www.bbc.co.uk/">BBC</a></li>
+                            <li><a href="cnn.com">CNN</a></li>
+                            <li><a href="https://www.foxnews.com/">FOX</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="https://www.reddit.com/">Reddit</a></li>
+                            <li><a href="https://www.youtube.com/">YouTube</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="https://www.amazon.com/">Amazon</a></li>
+                            <li><a href="https://www.ebay.com/">Ebay</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
         </main>
     </body>
 </html>
